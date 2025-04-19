@@ -21,6 +21,26 @@
             transition: transform 0.3s ease-in-out;
             box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
         }
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            background-color: #1f2937;
+            min-width: 200px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-menu a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-menu a:hover {
+            background-color: #374151;
+        }
     </style>
 </head>
 <body class="bg-gray-900 text-white">
@@ -32,8 +52,22 @@
             <h1 class="text-2xl font-bold text-white">AlgoCoin</h1>
         </div>
         <div class="flex space-x-6">
-            <a href="#features" class="hover:text-blue-500 transition-colors">Features</a>
-            <a href="#markets" class="hover:text-blue-500 transition-colors">Markets</a>
+            <div class="dropdown relative">
+                <a href="#features" class="hover:text-blue-500 transition-colors">Features</a>
+                <div class="dropdown-menu">
+                    <a href="#bot-trading">Bot Trading</a>
+                    <a href="#pilot-trading">Pilot Trading</a>
+                    <a href="#leverage-trading">Leverage Trading</a>
+                </div>
+            </div>
+            <div class="dropdown relative">
+                <a href="#markets" class="hover:text-blue-500 transition-colors">Markets</a>
+                <div class="dropdown-menu">
+                    <a href="#stock">Stock</a>
+                    <a href="#crypto">Crypto</a>
+                    <a href="#web3">Web3</a>
+                </div>
+            </div>
             <a href="#pricing" class="hover:text-blue-500 transition-colors">Pricing</a>
             <a href="/login" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-full transition-colors">
                 Login / Sign Up
